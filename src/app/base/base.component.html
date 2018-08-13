@@ -1,0 +1,11 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav-content class="d-flex flex-column">
+    <mat-toolbar color="primary"
+                 class="flex-grow-0">
+      <span>Weather App</span>
+    </mat-toolbar>
+    <app-weather-list [cityIds]="cityIds"
+                      class="flex-grow-1 container-fluid d-md-flex flex-wrap align-content-start pt-4 px-0 pl-md-4 m-0">
+    </app-weather-list>
+  </mat-sidenav-content>
+</mat-sidenav-container>

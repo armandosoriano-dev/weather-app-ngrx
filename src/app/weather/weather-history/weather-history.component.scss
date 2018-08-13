@@ -1,0 +1,9 @@
+:host {
+  ::ng-deep {
+    .mat-list-item-content {
+      align-items: start !important;
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+}

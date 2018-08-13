@@ -1,0 +1,22 @@
+<h3><label class="font-weight-bold">History</label> {{ data[0]?.name }}</h3>
+<mat-list role="list">
+  <mat-list-item *ngFor="let item of data"
+                 role="listitem"
+                 class="d-flex align-items-start mb-4">
+    <div class="d-flex flex-column">
+      <span>
+        <label class="font-weight-bold mr-2">Date</label>
+        {{ item.dt | date:'dd/MM/yyyy a' }}
+      </span>
+      <span>
+        <label class="font-weight-bold mr-2">Temp</label>
+        {{ item.main.temp }}ºc
+      </span>
+    </div>
+    <span>
+      <img [src]="'http://openweathermap.org/img/w/' + item.weather[0].icon + '.png'"
+           width="50"
+           height="50" />
+    </span>
+  </mat-list-item>
+</mat-list>

@@ -1,0 +1,12 @@
+<ng-container *ngIf="data?.length; else loadingCards">
+  <app-weather-card *ngFor="let item of data"
+                    [data]="item.history[item.history.length - 1]"
+                    [history]="item.history"
+                    class="col-12 col-md-6 col-lg-3 p-0">
+  </app-weather-card>
+</ng-container>
+<ng-template #loadingCards>
+  <app-weather-card *ngFor="let id of cityIds"
+                    class="col-12 col-md-6 col-lg-3 p-0">
+  </app-weather-card>
+</ng-template>
